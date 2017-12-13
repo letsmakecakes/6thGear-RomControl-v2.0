@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="USB plug in/out wakeup" android:key="usb_plugged" android:defaultValue="true" android:summaryOn="On" android:summaryOff="Off" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Outdoor Mode" android:key="display_outdoor_mode" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+        android:defaultValue="false"
+        android:key="lockscreen_rotate"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Lockscreen Rotation"
+        app:isSilent="false"
+        app:packageNameToKill="com.android.systemui"/>
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+        android:defaultValue="3000"
+        android:key="button_key_light"
+        android:entries="@array/button_key_light_entries"
+        android:entryValues="@array/button_key_light_values"
+        android:summary="%s"
+        android:title="Keyboard backlight duration"/>
+    <PreferenceScreen android:icon="@drawable/usb" android:title="About" android:summary="Rom info, Delverloper">
+        <PreferenceScreen android:title="Official Obnoxious Page" android:key="about_key" android:summary="Click to visit">
+            <intent android:action="android.intent.action.VIEW" android:data="https://forum.xda-developers.com/member.php?u=8203848" />
+        </PreferenceScreen>
+        <Preference android:title="Android version" android:key="rom_ver" android:summary="7.1.1" />
+        <Preference android:title="PDA" android:key="rom_base" android:summary="NMF26X.J510FNXXU2BQJ8" />
+        <Preference android:title="Build number" android:key="rom_name" android:summary="Obnoxious - J510FNXXU2BQJ8" />
+        <Preference android:title="Developer" android:key="rom_developer" android:summary="letsmakecakes @xda" />
+    </PreferenceScreen>
+</PreferenceScreen>

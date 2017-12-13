@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+        android:title="Use custom colors"
+        android:summaryOn="Using custom colors"
+        android:summaryOff="Using STOCK colors"
+        android:key="use_custom_keyguard_colors"
+        app:packageNameToKill="com.android.systemui"
+        app:isSilent="false" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+        android:title="Hours"
+        android:key="keyguard_hour_color"
+        android:defaultValue="-1"
+        android:dependency="use_custom_keyguard_colors"
+        android:summary="Pick color"
+        app:packageNameToKill="com.android.systemui"
+        app:isSilent="false" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+        android:title="Minutes"
+        android:key="keyguard_min_color"
+        android:defaultValue="-1"
+        android:dependency="use_custom_keyguard_colors"
+        android:summary="Pick color"
+        app:packageNameToKill="com.android.systemui"
+        app:isSilent="false" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+        android:title="Date"
+        android:key="keyguard_date_color"
+        android:defaultValue="-1"
+        android:dependency="use_custom_keyguard_colors"
+        android:summary="Pick color"
+        app:packageNameToKill="com.android.systemui"
+        app:isSilent="false" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+        android:title="Colon (only used on small clock)"
+        android:key="keyguard_colon_color"
+        android:defaultValue="-1"
+        android:dependency="use_custom_keyguard_colors"
+        android:summary="Pick color"
+        app:packageNameToKill="com.android.systemui"
+        app:isSilent="false" />
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+        android:title="Transition Effects"
+        android:key="faham_transition_effect"
+        android:defaultValue="true"
+        android:summaryOn="Enabled"
+        android:summaryOff="Disabled" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference
+        android:entries="@array/transitions_entries"
+        android:title="Select Effect"
+        android:key="transition_effect"
+        android:dependency="faham_transition_effect"
+        android:summary="%s"
+        android:defaultValue="1"
+        android:entryValues="@array/transitions_values" />
+</PreferenceScreen>
